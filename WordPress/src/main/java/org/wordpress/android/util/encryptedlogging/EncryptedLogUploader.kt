@@ -14,14 +14,14 @@ import org.wordpress.android.BuildConfig
 import org.wordpress.android.util.AppLog
 import org.wordpress.android.util.AppLog.T
 
-private const val AUTHORIZATION_HEADER = "HTTP_AUTHORIZATION"
+private const val AUTHORIZATION_HEADER = "Authorization"
 private const val CONTENT_TYPE_HEADER = "Content-Type"
 private const val CONTENT_TYPE_JSON = "application/json"
 private const val UUID_HEADER = "log-uuid"
 private const val UPLOAD_URL = "https://public-api.wordpress.com/rest/v1.1/encrypted-logging"
 private const val TEST_UUID = "" // omitted
-private const val TEST_FILE = """ // omitted
-"""
+private const val TEST_FILE = """
+""" //omitted
 
 class EncryptedLogUploader {
     fun test(context: Context) {
