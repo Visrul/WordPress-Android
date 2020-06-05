@@ -104,6 +104,7 @@ import org.wordpress.android.util.UploadWorker;
 import org.wordpress.android.util.UploadWorkerKt;
 import org.wordpress.android.util.VolleyUtils;
 import org.wordpress.android.util.analytics.AnalyticsUtils;
+import org.wordpress.android.util.encryptedlogging.EncryptedLogUploader;
 import org.wordpress.android.util.image.ImageManager;
 import org.wordpress.android.widgets.AppRatingDialog;
 
@@ -331,6 +332,8 @@ public class WordPress extends MultiDexApplication implements HasServiceInjector
 
         mSystemNotificationsTracker.checkSystemNotificationsState();
         ImageEditorInitializer.Companion.init(mImageManager, mImageEditorTracker);
+
+        new EncryptedLogUploader().test(this);
     }
 
     protected void initWorkManager() {
