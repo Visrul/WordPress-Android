@@ -3,7 +3,7 @@ GIT
   revision: 8083332753d90017587598b91aa7ab2444864e4d
   ref: 8083332753d90017587598b91aa7ab2444864e4d
   specs:
-    fastlane-plugin-wpmreleasetoolkit (0.9.4)
+    fastlane-plugin-wpmreleasetoolkit (0.9.5)
       activesupport (~> 4)
       chroma (= 0.2.0)
       diffy (~> 3.3)
