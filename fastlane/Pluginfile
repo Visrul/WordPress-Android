@@ -6,5 +6,5 @@ group :screenshots, optional: true do
   gem 'rmagick', '~> 3.2.0'
 end
 
-gem 'fastlane-plugin-wpmreleasetoolkit', git: 'https://github.com/wordpress-mobile/release-toolkit', ref:'3a82faed9e47a96155bc11933699a7d87c2842da'
+gem 'fastlane-plugin-wpmreleasetoolkit', git: 'https://github.com/wordpress-mobile/release-toolkit', ref:'8083332753d90017587598b91aa7ab2444864e4d'
 
