@@ -355,6 +355,7 @@ public class EditPostActivity extends LocaleAwareActivity implements
     @Inject ReblogUtils mReblogUtils;
     @Inject AnalyticsTrackerWrapper mAnalyticsTrackerWrapper;
     @Inject PublishPostImmediatelyUseCase mPublishPostImmediatelyUseCase;
+    @Inject AuthenticationUtils mAuthenticationUtils;
 
     private StorePostViewModel mViewModel;
 
@@ -1604,7 +1605,8 @@ public class EditPostActivity extends LocaleAwareActivity implements
                     org.wordpress.android.editor.R.drawable.ic_gridicons_video_camera,
                     aztecEditorFragment.getMaxMediaSize()
             );
-            aztecEditorFragment.setAztecVideoLoader(new AztecVideoLoader(getBaseContext(), loadingVideoPlaceholder));
+            aztecEditorFragment.setAztecVideoLoader(
+                    new AztecVideoLoader(getBaseContext(), loadingVideoPlaceholder, mAuthenticationUtils));
             aztecEditorFragment.setLoadingVideoPlaceholder(loadingVideoPlaceholder);
 
             if (getSite() != null && getSite().isWPCom() && !getSite().isPrivate()) {

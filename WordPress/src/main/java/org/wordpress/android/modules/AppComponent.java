@@ -537,8 +537,6 @@ public interface AppComponent extends AndroidInjector<WordPress> {
 
     void inject(HomepageSettingsDialog object);
 
-    void inject(AztecVideoLoader object);
-
     // Allows us to inject the application without having to instantiate any modules, and provides the Application
     // in the app graph
     @Component.Builder

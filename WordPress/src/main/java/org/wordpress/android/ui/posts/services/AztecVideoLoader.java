@@ -22,12 +22,13 @@ import javax.inject.Inject;
 public class AztecVideoLoader implements Html.VideoThumbnailGetter {
     private Context mContext;
     private final Drawable mLoadingInProgress;
-    @Inject AuthenticationUtils mAuthenticationUtils;
+    private final AuthenticationUtils mAuthenticationUtils;
 
-    public AztecVideoLoader(Context context, Drawable loadingInProgressDrawable) {
-        ((WordPress) WordPress.getContext().getApplicationContext()).component().inject(this);
+    public AztecVideoLoader(Context context, Drawable loadingInProgressDrawable,
+                            AuthenticationUtils authenticationUtils) {
         this.mContext = context;
         this.mLoadingInProgress = loadingInProgressDrawable;
+        this.mAuthenticationUtils = authenticationUtils;
     }
 
     public void loadVideoThumbnail(final String url, final Html.VideoThumbnailGetter.Callbacks callbacks,
